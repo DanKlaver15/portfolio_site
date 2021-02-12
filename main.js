@@ -8,13 +8,9 @@ window.addEventListener("mousemove", handleMousemove, false);
 function handleMousemove(event) {
 
   var viewportX = event.clientX;
-  var viewportY = event.clientY;
 
   var viewportWidth = document.documentElement.clientWidth;
   var viewportHeight = document.documentElement.clientHeight;
-
-  var edgeTop = edgeSize;
-  var edgeBottom = ( viewportHeight - edgeSize );
   
   var edgeLeft = edgeSize;
   var edgeRight = (viewportWidth - edgeSize);
