@@ -1812,3 +1812,11 @@ width: 100%;
 .image.main img {
 width: 100%;
 }
+
+.mb-0 {
+   color: #3b5586;
+}
+
+.card-block {
+   color: #000000;
+}
