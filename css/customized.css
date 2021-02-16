@@ -1820,3 +1820,17 @@ width: 100%;
 .card-block {
    color: #000000;
 }
+
+#headshot {
+   max-block-size: 40%;
+   margin: auto;
+}
+
+@media screen and (max-width: 736px) {
+
+   #headshot {
+      width: 20%;
+      height: 20%;
+      margin: 2rem auto 0rem;
+   }
+}
