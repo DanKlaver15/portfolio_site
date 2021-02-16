@@ -4,11 +4,12 @@
 
 // contact form
 
-   $('form#contactForm button.submit').click(function() {
+   $('form#contactForm button.btn btn-primary mb-2').click(function() {
 
       $('#image-loader').fadeIn();
 
       var contactName = $('#contactForm #contactName').val();
+      var contactPhone = $('#contactForm #contactPhone').val();
       var contactEmail = $('#contactForm #contactEmail').val();
       var contactSubject = $('#contactForm #contactSubject').val();
       var contactMessage = $('#contactForm #contactMessage').val();
