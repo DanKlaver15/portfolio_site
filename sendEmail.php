@@ -6,7 +6,8 @@ $siteOwnersEmail = 'dklaver15@gmail.com';
 
 if($_POST) {
 
-   $name = trim(stripslashes($_POST['contactName']));
+   $name = trim(stripslashes($_POST['contactFirst' + 'contactLastName']));
+	$phone = trim(stripslashes($_POST['contactPhone']));
    $email = trim(stripslashes($_POST['contactEmail']));
    $subject = trim(stripslashes($_POST['contactSubject']));
    $contact_message = trim(stripslashes($_POST['contactMessage']));
@@ -29,6 +30,7 @@ if($_POST) {
 
    // Set Message
    $message .= "Email from: " . $name . "<br />";
+	$message .= "Phone Number: " . $phone . "<br />";
 	$message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
@@ -57,6 +59,7 @@ if($_POST) {
 	else {
 
 		$response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
+		$response = (isset($error['phone'])) ? $error['phone'] . "<br /> \n" : null;
 		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
 		$response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
 		
@@ -64,10 +67,10 @@ if($_POST) {
 
 	} # end if - there was a validation error
 
-	// $servername = "localhost:3306";
-	// $username = "americanelectric@localhost";
-	// $password = "Amer!can12";
-	// $dbname = "americanelectric";
+	// $servername = "";
+	// $username = "";
+	// $password = "";
+	// $dbname = "";
 
 	// // Create connection
 	// $conn = new mysqli($servername, $username, $password, $dbname);
